@@ -261,11 +261,11 @@ function pullSettingsFromUI() {
   settings.scope = $('#scope').val();
   settings.redirect_uri = $('#redirect_uri').val();
 
-  protocolUrl = settings.authority + '/protocol/openid-connect';
-  tokenUrl = protocolUrl + '/token';
-  authUrl = protocolUrl + '/auth';
-  userInfoUrl = protocolUrl + '/userinfo';
-  logoutUrl = protocolUrl + '/logout';
+  protocolUrl = settings.authority;
+  tokenUrl = protocolUrl + '/connect/token';
+  authUrl = protocolUrl + '/connect/authorize';
+  userInfoUrl = protocolUrl + '/connect/userinfo';
+  logoutUrl = protocolUrl + '/connect/endsession';
 }
 
 function loadSettingsIntoUI() {
